@@ -748,3 +748,26 @@ dtype: int64}]))),
 2025-08-14 00:02:56,409:INFO:Initializing load_model()
 2025-08-14 00:02:56,409:INFO:load_model(model_name=deployment_20231111, platform=None, authentication=None, verbose=True)
 2025-08-14 00:06:31,086:INFO:Initializing predict_model()
+2025-08-14 00:06:31,086:INFO:predict_model(self=<pycaret.regression.oop.RegressionExperiment object at 0x000001D203DF1850>, estimator=Pipeline(memory=Memory(location=None),
+         steps=[('numerical_imputer',
+                 TransformerWrapper(include=['age', 'bmi', 'children'],
+                                    transformer=SimpleImputer())),
+                ('categorical_imputer',
+                 TransformerWrapper(include=['sex', 'smoker', 'region'],
+                                    transformer=SimpleImputer(strategy='most_frequent'))),
+                ('ordinal_encoding',
+                 TransformerWrapper(include=['sex', 'smoker'],
+                                    transfor...
+                ('onehot_encoding',
+                 TransformerWrapper(include=['region'],
+                                    transformer=OneHotEncoder(cols=['region'],
+                                                              handle_missing='return_nan',
+                                                              use_cat_names=True))),
+                ('polynomial_features',
+                 TransformerWrapper(transformer=PolynomialFeatures(include_bias=False))),
+                ('normalize', TransformerWrapper(transformer=StandardScaler())),
+                ('trained_model', LinearRegression(n_jobs=-1))]), probability_threshold=None, encoded_labels=False, raw_score=False, round=0, verbose=True, ml_usecase=None, preprocess=True, encode_labels=<function _SupervisedExperiment.predict_model.<locals>.encode_labels at 0x000001D25E9F27A0>)
+2025-08-14 00:06:31,086:INFO:Checking exceptions
+2025-08-14 00:06:31,086:INFO:Preloading libraries
+2025-08-14 00:06:31,087:INFO:Set up data.
+2025-08-14 00:06:31,088:INFO:Set up index.
